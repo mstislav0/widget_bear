@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bear Widget — Interactive Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; color: #333; margin: 0; background: #faf7f2; }
+
+    header {
+      background: #4a3728;
+      color: white;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    header h1 { margin: 0; font-size: 22px; }
+
+    nav {
+      background: #7a5a48;
+      padding: 10px 40px;
+      display: flex;
+      gap: 24px;
+    }
+    nav a { color: #faecd8; text-decoration: none; font-size: 15px; }
+    nav a:hover { text-decoration: underline; }
+
+    .hero {
+      padding: 60px 40px 40px;
+      text-align: center;
+    }
+    .hero h2 { font-size: 32px; color: #4a3728; margin-bottom: 12px; }
+    .hero p  { color: #666; max-width: 520px; margin: 0 auto 28px; line-height: 1.6; }
+
+    .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
+    button {
+      background: #c8a87a;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 15px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    button:hover { background: #a07850; }
+    button.secondary { background: #e8d8c0; color: #4a3728; }
+    button.secondary:hover { background: #d4c0a0; }
+
+    .shelf-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      padding: 0 40px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .shelf-row a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #fff;
+      border: 2px solid #c8a87a;
+      border-radius: 8px;
+      color: #4a3728;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .shelf-row a:hover { background: #faecd8; }
+
+    .card-row {
+      display: flex;
+      gap: 20px;
+      padding: 0 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 80px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1.5px solid #ddd;
+      padding: 24px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .card .icon { font-size: 36px; margin-bottom: 8px; }
+    .card p { font-size: 13px; color: #666; margin: 0; }
+
+    footer {
+      background: #4a3728;
+      color: #c8a87a;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .hint {
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span style="font-size:28px">🐻</span>
+    <h1>Bear Widget</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Pricing</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Move your mouse around</h2>
+    <p>The bear walks on shelves, jumps onto buttons and links, and always looks at your cursor. Click the bear to hear what it says.</p>
+    <div class="btn-row">
+      <button>Get Started</button>
+      <button class="secondary">Learn More</button>
+      <button>Sign Up Free</button>
+      <button class="secondary">Watch Demo</button>
+    </div>
+  </div>
+
+  <p class="hint">↓ hover over these links — the bear will jump up to them</p>
+
+  <div class="shelf-row">
+    <a href="#">Docs</a>
+    <a href="#">API Reference</a>
+    <a href="#">Examples</a>
+    <a href="#">Blog</a>
+    <a href="#">Support</a>
+  </div>
+
+  <div class="card-row">
+    <div class="card"><div class="icon">🚀</div><p>Fast &amp; lightweight</p></div>
+    <div class="card"><div class="icon">🎨</div><p>Fully customizable</p></div>
+    <div class="card"><div class="icon">🔌</div><p>One-line embed</p></div>
+    <div class="card"><div class="icon">🤖</div><p>AI-ready API</p></div>
+  </div>
+
+  <footer>Bear Widget — embed me on any site</footer>
+
+  <script src="bear-widget.js"></script>
+  <bear-widget></bear-widget>
+
+</body>
+</html>
